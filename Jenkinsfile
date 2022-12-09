@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Buss') {
+      steps {
+        echo 'Buss'
+      }
+    }
+
   }
 }
