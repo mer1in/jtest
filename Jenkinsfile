@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Buzz') {
       parallel {
-        stage('Buzz') {
+        stage('BuzzA') {
           steps {
             echo 'Buzz'
             sh 'sleep 5'
           }
         }
 
-        stage('Bazz') {
+        stage('BuzzB') {
           steps {
             sh 'sleep 5'
             sh 'echo "Hi $BOO"'
