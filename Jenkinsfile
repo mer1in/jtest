@@ -23,6 +23,8 @@ pipeline {
     stage('Buss') {
       steps {
         echo 'Buss'
+        sh 'echo 123 > artifact.txt'
+        archiveArtifacts(allowEmptyArchive: true, artifacts: '*.txt', fingerprint: true, onlyIfSuccessful: true)
       }
     }
 
