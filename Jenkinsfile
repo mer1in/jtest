@@ -12,7 +12,7 @@ pipeline {
         stage('Bazz') {
           steps {
             sh 'sleep 5'
-            sh 'echo "Hi"'
+            sh 'echo "Hi $BOO"'
           }
         }
 
@@ -25,5 +25,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    BOO = 'BAA'
   }
 }
