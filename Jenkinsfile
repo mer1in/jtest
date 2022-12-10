@@ -6,6 +6,7 @@ pipeline {
         stage('Buzz') {
           steps {
             echo 'Buzz'
+            sh 'sleep 5'
           }
         }
 
