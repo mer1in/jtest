@@ -1,5 +1,7 @@
 pipeline {
-  agent { label 'k8s'} 
+  agent {
+    label 'k8s'
+  }
   stages {
     stage('Buzz') {
       parallel {
@@ -25,6 +27,12 @@ pipeline {
         echo 'Buss'
         sh 'echo 123 > artifact.txt'
         archiveArtifacts(allowEmptyArchive: true, artifacts: '*.txt', fingerprint: true, onlyIfSuccessful: true)
+      }
+    }
+
+    stage('confirm') {
+      steps {
+        input(message: 'Please confirm', id: 'cid', ok: 'Yeah')
       }
     }
 
