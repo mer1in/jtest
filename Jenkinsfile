@@ -32,7 +32,7 @@ pipeline {
 
     stage('confirm') {
       steps {
-        echo input(message: 'Please confirm', id: 'cid', ok: 'Yeah')
+        input(message: 'Please confirm', id: 'cid', ok: 'Yeah', submitter: 'KKK', submitterParameter: 'QQQ')
       }
     }
 
