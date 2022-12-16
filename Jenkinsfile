@@ -42,7 +42,7 @@ pipeline {
       }
       input {
         message 'Should we continue?'
-        id 'Yes, we should.'
+        id 'yes'
         submitter 'alice,bob'
         parameters {
           string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I greet?')
